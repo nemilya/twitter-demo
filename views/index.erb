@@ -1,7 +1,6 @@
 <% unless @logged %>
   <a href="/auth/twitter">Login in Twitter App</a>
 <% else %>
-  Token: <%= session[:token] %><br />
   <a href="/logout">Logout</a>
 <% end %>
 

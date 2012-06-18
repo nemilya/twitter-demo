@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'omniauth-twitter'
+require 'twitter'
 
 enable :sessions
 
@@ -9,6 +10,14 @@ require 'init_omniauth'
 before do
   if !session[:token].nil? && session[:token]
     @logged = true
+
+    Twitter.configure do |config|
+      config.consumer_key    = ENV['API_KEY']
+      config.consumer_secret = ENV['API_SECRET']
+      config.oauth_token        = session[:token]
+      config.oauth_token_secret = session[:secret]
+    end
+
   end
 end
 
@@ -32,7 +41,7 @@ end
 
 post '/post' do
   content = params[:content]
-  # todo
+  Twitter.update(content)
   redirect '/?posted=1'
 end
 
