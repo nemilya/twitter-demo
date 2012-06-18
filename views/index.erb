@@ -1,0 +1,17 @@
+<% unless @logged %>
+  <a href="/login">Login</a>
+<% else %>
+  <a href="/logout">Logout</a>
+<% end %>
+
+<% if @logged %>
+
+  <% if params[:posted] %>
+    <br>
+    Posted ok.
+    <a href="/">Back</a>
+  <% else %>
+    <%= erb :'_form_post', :layout=>false %>
+  <% end %>
+
+<% end %>
