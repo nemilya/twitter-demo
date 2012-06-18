@@ -5,8 +5,13 @@ Twitter Demo
 
 Дема здесь: http://twitter-demo.cloudfoundry.com/
 
+
 Первый шаг (step1)
 ------------------
+
+[Посмотреть изменения](https://github.com/nemilya/twitter-demo/commit/e3ad976c6297f1d6401fc8f05480dc1a4603dbf0)
+
+
 
 Синатра приложение, с логин/выход, отображение когда "вошёл" - формы поста,
 обработка поста, редирект, отображение подтверждение.
@@ -22,6 +27,8 @@ Twitter Demo
 
 Шаг второй (step2)
 ------------------
+
+[Посмотреть изменения](https://github.com/nemilya/twitter-demo/commit/8fbcfc212313a063c2f332f027bc2a7b5743df99)
 
 Создание твиттер приложения.
 
@@ -58,6 +65,8 @@ Twitter Demo
 
 Шаг третий (step3)
 ------------------
+
+[Посмотреть изменения](https://github.com/nemilya/twitter-demo/commit/a777141b49e61d0f4b87815f198df80b2c226fe9)
 
 Добавление твиттер враппера для API.
 
