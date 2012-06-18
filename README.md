@@ -3,7 +3,22 @@ Twitter Demo
 
 Демо приложение для поста в Твиттер.
 
-Дема здесь: http://twitter-demo.cloudfoundry.com/
+Demo: http://twitter-demo.cloudfoundry.com/
+
+* [step 1](https://github.com/nemilya/twitter-demo/commit/e3ad976c6297f1d6401fc8f05480dc1a4603dbf0)
+* [step 2](https://github.com/nemilya/twitter-demo/commit/8fbcfc212313a063c2f332f027bc2a7b5743df99)
+* [step 3](https://github.com/nemilya/twitter-demo/commit/a777141b49e61d0f4b87815f198df80b2c226fe9)
+
+Технологии
+----------
+
+* [Ruby](http://ruby-lang.org) - язык программирования Ruby
+* [CloudFoundry](http://cloudfoundry.com/) - быстрое развёртывание Ruby приложений
+* [Sinatra](http://sinatraruby.ru/) - минималистичный веб фреймворк на Ruby
+* [omniauth](https://github.com/intridea/omniauth) - универсальная система авторизации
+* gem [omniauth-twitter](https://github.com/arunagw/omniauth-twitter) - стратегия для OmniAuth для авторизации в Twitter
+* gem [twitter](https://github.com/jnunemaker/twitter) - Ruby обёртка для API функций Twitter
+
 
 
 Первый шаг (step1)
@@ -12,13 +27,14 @@ Twitter Demo
 [Посмотреть изменения](https://github.com/nemilya/twitter-demo/commit/e3ad976c6297f1d6401fc8f05480dc1a4603dbf0)
 
 
+Разработка "каркаса" приложения.
 
 Синатра приложение, с логин/выход, отображение когда "вошёл" - формы поста,
 обработка поста, редирект, отображение подтверждение.
 
 Размещение на CloudFoundry
 
-  vmc push twitter-demo
+    vmc push twitter-demo
 
 Размещение на GitHub
 
@@ -30,7 +46,7 @@ Twitter Demo
 
 [Посмотреть изменения](https://github.com/nemilya/twitter-demo/commit/8fbcfc212313a063c2f332f027bc2a7b5743df99)
 
-Создание твиттер приложения.
+Создание твиттер приложения. Авторизация.
 
 Заходим в раздел разработчиков https://dev.twitter.com, создаём приложение.
 
@@ -44,7 +60,7 @@ Twitter Demo
 
 Добавление omniauth авторизации.
 
-Прописываем ключ и секрет в yml файл - config/oauth.yml
+Прописываем ключ и секрет в yml файл - `config/oauth.yml`
 
 Добавляем в Gemfile - гем `omniauth-twitter`.
 
@@ -68,9 +84,9 @@ Twitter Demo
 
 [Посмотреть изменения](https://github.com/nemilya/twitter-demo/commit/a777141b49e61d0f4b87815f198df80b2c226fe9)
 
-Добавление твиттер враппера для API.
-
 Пост сообщения на стену твиттер аккаунта.
+
+Добавление твиттер враппера для API.
 
 Используем https://github.com/jnunemaker/twitter
 
